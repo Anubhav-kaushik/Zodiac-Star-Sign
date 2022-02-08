@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Star Sign</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .zodiac--section[data-isVisible="false"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="zodiac--container">
+        <div class="zodiac--header">
+            <figure class="zodiac--logo">
+                <img src="infographics/interactive-names/logo.png" alt="PathForward logo">
+            </figure>
+        </div>
+        <div class="zodiac--main">
+            <div class="zodiac--first zodiac--section" data-section=1 data-isvisible="true">
+                <!-- main heading -->
+                <h1 class="zodiac--main-heading">
+                    <span>What's My Zodiac</span>
+                    <span>Star Sign</span>
+                </h1>
+
+                <!-- divider -->
+                <div class="zodiac--main-divider">
+                    <img src="infographics/interactive-names/divider.svg" alt="&#9671;">
+                </div>
+
+                <!-- paragraphs -->
+                <div class="zodiac--main-paragraphs">
+                    <p>
+                        The zodiac assigns us each a star sign based on the placement of the stars and planets at the time of each person's birth. Not to be too dramatic, but knowing your sign can yield amazing insights into your strengths, weaknesses, personality, and compatibility.
+                    </p>
+                    <br>
+                    <p>
+                        Enter your birth date and give it a try.
+                    </p>
+                </div>
+
+                <!-- selection and enter question section  -->
+                <div class="zodiac--user-input-section">
+                    <div class="zodiac--question-input-container">
+                        <fieldset>
+                            <legend>Date of birth</legend>
+                            <input type="date" id="user-question">
+                        </fieldset>
+                    </div>
+                    <div class="zodiac--submit-btn-container">
+                        <button id="submit-btn" class="zodiac--btn" disabled onclick="onClickSubmit()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="zodiac--second" data-section=2 data-isvisible="false">
+            <div class="zodiac--secondary-heading">
+                <h2>
+                    Result
+                </h2>
+            </div>
+            <div class="zodiac--main-result-container">
+                <div class="zodiac--result-icon"></div>
+                <div class="zodiac--result-text">
+                    <div class="result-row1">
+                        <div class="result-heading"></div>
+                        <div class="result-interval"></div>
+                    </div>
+                    <div class="result-row2"></div>
+                    <div class="result-row3"></div>
+                    <div class="result-row4"></div>
+                </div>
+            </div>
+            <div class="zodiac--btn-container">
+                <button class="zodiac--btn" onclick="onClickExplore()">Reset</button>
+            </div>
+        </div>
+
+        <div class="zodiac--footer  zodiac--section" data-section=2 data-isvisible="false">
+            <div class="zodiac--footer-heading">
+                <h3>
+                    Resources:
+                </h3>
+            </div>
+            <div class="zodiac--footer-liks-container">
+                <!-- ordered list of links in two columns -->
+            </div>
+        </div>
+    </div>
+
+    <script src="action.js"></script>
+</body>
+
+</html>

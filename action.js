@@ -1,0 +1,192 @@
+/* main */
+const JSON = [
+  {
+    "name": "Aries",
+    "interval": "March 21 - April 19",
+    "para1": "As an Aries, you're willful, courageous, and headstrong, just like the ram. You have no filter and don't hesitate to say what you mean and show how you feel. Sometimes you act so fast you can't remember why you're mad — though you won't admit it. For you, life is a game and you're always the winner.",
+    "para2": "You're the daredevil of your group, always ready for a challenge. You get bored easily, though. Yours is the TikTok that's fresh, fiery, and a little off the hook. Houdini, DaVinci, and Jackie Chan are all Aries signs like you — and we couldn't take our eyes off them, either.",
+    "compatible signs": "Sagittarius, Gemini, Libra",
+    "image": "infographics/interactive-name/aries.svg"
+  },
+  {
+    "name": "Taurus",
+    "interval": "April 20 - May 20",
+    "para1": "You, Taurus, are an immovable force, just like the bull. You're in good company among other steadfast bulls like Malcolm X and Mr. T. You don't see a lot of gray around you. For a Taurus, it's black or white and you're not interested in debating what's in between.",
+    "para2": "As an earth sign, you like to sink your roots deep. Your friends may call you a homebody, but you simply know what you like and want to snuggle down and stay there. You resist change, but this just means you can provide a safe anchor when the world's gone cray.",
+    "compatible signs": "Capricorn, Virgo, Cancer",
+    "image": "infographics/interactive-name/taurus.svg"
+  },
+  {
+    "name": "Gemini",
+    "interval": "May 21 - June 20",
+    "para1": "Hey Gemini, I see you there skimming through this profile because you're doing a hundred things at once. Your symbol is the twins because it would literally take two of you to finish all the projects you have. Forever a social butterfly, you're usually spotted flitting about the bar, dominating the dance floor, or making new friends — because we all know you've never met a stranger.",
+    "para2": "Geminis like Stevie Nicks and Prince prove that it's impossible for your sign to stay in the background. Your charisma will certainly take you places, though it's uncertain whether you'll ever settle in one spot.",
+    "compatible signs": "Libra, Aquarius, Sagittarius",
+    "image": "infographics/interactive-name/gemini.svg"
+  },
+  {
+    "name": "Cancer",
+    "interval": "June 21 - July 22",
+    "para1": "As a Cancer, you're an undeniably complex creature. Like the crab, you're hard on the outside, soft on the inside, and capable of making your home just about anywhere. You love seeking comfort and jumped on the hygge bandwagon as fast as you could.",
+    "para2": "You're extremely sensitive and selective about who you keep close. You carry all your besties' problems on your shoulders so you tend to keep the circle small. Others just love your warm, gentle energy, though. Like fellow Cancer Tom Hanks, you're hard not to love.",
+    "compatible signs": "Scorpio, Pisces, Virgo",
+    "image": "infographics/interactive-name/cancer.svg"
+  },
+  {
+    "name": "Leo",
+    "interval": "July 23 - August 22",
+    "para1": "You are Leo, and we hear your roar. The lion of the zodiac, you have a big personality and a taste for the spotlight. You'll become king of any jungle you call home. And what a luxurious home it will be! You know how to enjoy the finer things in life and never settle for Coach when you can go Louis Vuitton.",
+    "para2": "You ooze elegance and creativity just like fellow Leos Coco Chanel and Kylie Jenner. You're the perfect fit for social media stardom, so go ahead and keep that Insta looking lively. You were made to shine.",
+    "compatible signs": "Sagittarius, Aquarius, Gemini",
+    "image": "infographics/interactive-name/leo.svg"
+  },
+  {
+    "name": "Virgo",
+    "interval": "August 23 - September 22",
+    "para1": "Neat and meticulous, you're always the most organized person in your social circle. As a Virgo, you have strong perfectionistic tendencies and feel best when you're productive and useful. Virgos know how to get it done, so you shouldn't be surprised to find the likes of Zendaya and Beyonce in your midst.",
+    "para2": "Your brain is always moving full speed ahead so you can pop out ideas like a Pez dispenser. Best of all, your plans are always thoughtfully designed and backed by facts. Though you may stumble a bit over communication, your brilliance always shines through.",
+    "compatible signs": "Capricorn, Taurus, Scorpio",
+    "image": "infographics/interactive-name/virgo.svg"
+  },
+  {
+    "name": "Libra",
+    "interval": "September 23 - October 22",
+    "para1": "Represented by a set of scales, you love balance and harmony. Your aesthetics are always on point, which is why friends keep coming to you for help decorating their apartments or putting together the perfect outfit. If there's one thing you will never be, it's basic.",
+    "para2": "Like your fellow Libra Kim Kardashian, you simply gravitate toward the finer things in life. You're not stuck up, though, and actually make a fantastic partner. You're happiest when you're in good company and always strive to make sure everyone around you is happy.",
+    "compatible signs": "Libra, Aries, Aquarius",
+    "image": "infographics/interactive-name/libra.svg"
+  },
+  {
+    "name": "Scorpio",
+    "interval": "October 23 - November 21",
+    "para1": "Be careful with that stinger, Scorpio! As the clever scorpion of the zodiac, you're one of the most enigmatic signs around. You play the long game and keep your stinger primed for the perfect moment. You prefer to socialize from behind a double-sided mirror and keep your tender, authentic identity hidden.",
+    "para2": "Your sign is often misunderstood, as fellow Scorpios like Sylvia Plath and Marie Antoinette could've told you. Others may see you as dark and brooding at times, but you're simply deep and mystical, brimming with wonders for anyone brave enough to dive into your depths.",
+    "compatible signs": "Pisces, Cancer, Virgo",
+    "image": "infographics/interactive-name/scorpio.svg"
+  },
+  {
+    "name": "Sagittarius",
+    "interval": "November 22 - December 21",
+    "para1": "You're represented by the archer, Sagittarius, always ready to take aim at a new adventure and loose your arrows of inspiration. You're impossible to miss in a crowd and probably spent your youth hearing endless admonitions to use your indoor voice. Emotionally driven, you may not make the soundest choices, but somehow your life spins into a brilliant masterpiece of exploration and enjoyment anyway.",
+    "para2": "Though you seem self-assured, deep down you're full of questions. Self-improvement is a never-ending passion you pursue as relentlessly as your next great excursion into the unknown.",
+    "compatible signs": "Aries, Gemini, Sagittarius",
+    "image": "infographics/interactive-name/sagittarius.svg"
+  },
+  {
+    "name": "Capricorn",
+    "interval": "December 22 - January 19",
+    "para1": "Driven by fearless ambition, you have no problem charging forward to claim what you want. Challenges and obstacles don't slow you down. In fact, they often give you a supercharged boost of determination. Like fellow Capricorns Michelle Obama and Dolly Parton, you will prove to the world that there's nothing you can't do.",
+    "para2": "In your youth, others will see you as wise beyond your years, but you'll claim an increasing sense of playfulness as you get older, making you a little bit like a cosmic Benjamin Button. You take your time warming up to people, but friends love your steadfast nature once they get to know you.",
+    "compatible signs": "Virgo, Scorpio, Capricorn",
+    "image": "infographics/interactive-name/capricorn.svg"
+  },
+  {
+    "name": "Aquarius",
+    "interval": "January 20 - February 18",
+    "para1": "You're a natural humanitarian, Aquarius. Relentlessly driven to pursue the greater good, you're always researching innovative ways to make the world a better place. Deeply intellectual, you place far more importance on facts than feelings. That said, you're always open to intriguing ideas or conspiracy theories, and you pay no mind to whether they'll get you canceled.",
+    "para2": "It's no surprise that you're in the company of Aquarians like Yoko Ono and Virginia Woolf. You're sure to leave your mark on the world.",
+    "compatible signs": "Gemini, Libra, Aquarius",
+    "image": "infographics/interactive-name/aquarius.svg"
+  },
+  {
+    "name": "Pisces",
+    "interval": "February 19 - March 20",
+    "para1": "As a Pisces, you're one of the most intuitive and spiritual signs of the zodiac, which naturally makes you seem a bit extra. You have an uncanny connection to the universe and find signs everywhere you look. Your dreams can be so prophetic you may have trouble distinguishing them from reality.",
+    "para2": "It's easy for the fishes of the zodiac to drift away on the current. While you should cultivate your psychic gifts, you also need to find a way to keep your feet firmly on the ground.",
+    "compatible signs": "Scorpio, Cancer, Capricorn",
+    "image": "infographics/interactive-name/pisces.svg"
+  }
+]
+
+const resourcesLinks = [
+  'https://www.allure.com/story/aries-zodiac-sign-personality-traits',
+  'https://www.costarastrology.com/zodiac-signs/aries-sign',
+  'https://www.rd.com/list/zodiac-signs-compatibility',
+  'https://www.allure.com/story/taurus-zodiac-sign-personality-traits',
+  'https://www.costarastrology.com/zodiac-signs/taurus-sign',
+  'https://www.costarastrology.com/zodiac-signs/gemini-sign',
+  'https://www.allure.com/story/gemini-zodiac-sign-personality-traits',
+  'https://www.allure.com/story/cancer-zodiac-sign-personality-traits',
+  'https://www.costarastrology.com/zodiac-signs/cancer-sign',
+  'https://www.cosmopolitan.com/entertainment/celebs/g32086359/famous-cancer-celebrities',
+  'https://www.allure.com/story/leo-zodiac-sign-personality-traits',
+  'https://www.costarastrology.com/zodiac-signs/leo-sign',
+  'https://www.costarastrology.com/zodiac-signs/virgo-sign',
+  'https://www.allure.com/story/virgo-zodiac-sign-personality-traits',
+  'https://www.costarastrology.com/zodiac-signs/libra-sign',
+  'https://www.allure.com/story/libra-zodiac-sign-personality-traits',
+  'https://www.costarastrology.com/zodiac-signs/scorpio-sign',
+  'https://www.allure.com/story/scorpio-zodiac-sign-personality-traits',
+  'https://www.allure.com/story/sagittarius-zodiac-sign-personality-traits',
+  'https://www.costarastrology.com/zodiac-signs/sagittarius-sign',
+  'https://www.costarastrology.com/zodiac-signs/capricorn-sign',
+  'https://www.allure.com/story/capricorn-zodiac-sign-personality-traits',
+  'https://www.allure.com/story/aquarius-zodiac-sign-personality-traits',
+  'https://www.costarastrology.com/zodiac-signs/aquarius-sign',
+  'https://www.costarastrology.com/zodiac-signs/pisces-sign',
+  'https://www.allure.com/story/pisces-zodiac-sign-personality-traits'
+]
+
+let visibleSection = 1;
+
+function scrollToHeader() {
+    let header = document.querySelector('.zodiac--header');
+    header.scrollIntoView({behavior: 'smooth'});
+}
+
+function showHideSections(visibleSectionNum) {
+    /*
+        This function show or hide the sections.
+        visibleSectionNum: The section you want to show.
+    */
+    const sections = document.querySelectorAll('.zodiac--section');
+    for (let section of sections) {
+        if (section.dataset.section == visibleSectionNum) {
+            section.dataset.isvisible = true;
+        } else {
+            section.dataset.isvisible = false;
+        }
+    }
+}
+
+function disableSubmitButton() {
+    const submitButton = document.querySelector('#submit-btn');
+    submitButton.disabled = true;
+}
+
+function enableSubmitButton() {
+    const submitButton = document.querySelector('#submit-btn');
+    submitButton.disabled = false;
+}
+
+function resetInputField() {
+    const inputField = document.querySelector('#user-question');
+    inputField.value = '';
+}
+
+resetInputField();
+
+async function onClickSubmit() {
+    secondSectionLoaded(selectedSpread);
+    scrollToHeader();
+    setTimeout(() => {
+      showHideSections(2);
+    }, 1000);
+    visibleSection = 2;
+}
+
+/* --Second page JS-- */
+
+// reset game 
+async function resetGame() {
+    /*
+        Reset the game.
+    */
+    scrollToHeader();
+    await sleep(0.5);
+    disableSubmitButton();
+    resetInputField();
+    showHideSections(1);
+}
+
+

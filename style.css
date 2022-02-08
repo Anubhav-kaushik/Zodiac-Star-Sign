@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Museo Sans 300';
+    src: url(infographics/fonts/MuseoSans-300.otf);
+}
+
+@font-face {
+    font-family: 'Museo Sans 500';
+    src: url(infographics/fonts/MuseoSans_500.otf);
+}
+
+@font-face {
+    font-family: 'Museo Sans Rounded 100';
+    src: url(infographics/fonts/MuseoSansRounded-100.ttf);
+}
+
+@font-face {
+    font-family: 'Museo Sans Rounded 300';
+    src: url(infographics/fonts/MuseoSansRounded-300.ttf);
+}
+
+@font-face {
+    font-family: 'Museo Sans Rounded 500';
+    src: url(infographics/fonts/MuseoSansRounded-500.ttf);
+}
+
+@font-face {
+    font-family: 'Museo Sans Rounded 700';
+    src: url(infographics/fonts/MuseoSansRounded-700.ttf);
+}
+
+:root {
+    --button-orange: #f49434;
+    --button-disable-orange: #f4943433;
+    --text-margenta: #731745;
+    --text-white: #fff;
+    --shadow-orange: #f79521;
+    --bg-margenta: #731745;
+    --300: 'Museo Sans 300';
+    --500: 'Museo Sans 500';
+    --rounded-100: 'Museo Sans Rounded 100';
+    --rounded-300: 'Museo Sans Rounded 300';
+    --rounded-500: 'Museo Sans Rounded 500';
+    --rounded-700: 'Museo Sans Rounded 700';
+    --header-height: 150px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#zodiac--container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url(infographics/interactive-names/background.jpg);
+    background-color: var(--bg-margenta);
+    background-size: cover;
+    color: white;
+    font-family: var(--300);
+}
+
+/* Header */
+.zodiac--header {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.zodiac--header > .zodiac--logo {
+    height: 60%;
+}
+
+.zodiac--header > .zodiac--logo > img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main */
+.zodiac--main {
+    width: 100%;
+    height: 100%;
+}
+
+#zodiac--container  a {
+    text-decoration: none;
+    color: white
+}
+
+#zodiac--container p {
+    line-height: 1.5em;
+}
+
+.zodiac--btn {
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-orange);
+    font-family: var(--500), sans-serif;
+    font-size: 1em;
+    color: var(--text-margenta);
+    border: none;
+}
+
+.zodiac--btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+*[data-isvisible="false"] {
+    display: none;
+}
+
+
+/* --First Section-- */
+.zodiac--section {
+    min-height: calc(100vh - var(--header-height));
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.zodiac--first > h1 {
+    font-family: var(--300), sans-serif;
+    font-size: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.zodiac--first > h1 > span {
+    width: max-content;
+}
+
+.zodiac--main-divider {
+    max-width: 50em;
+    margin: 5vmin auto;
+}
+
+.zodiac--main-paragraphs {
+    font-family: var(--300), sans-serif;
+    font-size: 1.2em;
+    margin: 0 auto;
+}
+
+.zodiac--main-paragraphs > p {
+    max-width: 40em;
+    margin: 0 auto 1em;
+}
+
+.zodiac--question-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zodiac--question-input-container fieldset {
+    height: fit-content;
+    color: var(--text-white);
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1em;
+    margin: 3em auto;
+    padding: 0.5em 1.5em 1em;
+    font-family: var(--rounded-300), sans-serif;
+}
+
+.zodiac--question-input-container input {
+    width: 15em;
+    color: var(--text-white);
+    background-color: transparent;
+    font-size: 1.5em;
+    border: none;
+    font-family: var(--rounded-300), sans-serif;
+    text-transform: uppercase;
+}
+
+#user-question::placeholder,
+#user-question::-webkit-input-placeholder {
+    color: var(--text-white);
+    font-family: var(--rounded-300), sans-serif;
+    font-weight: 500;
+}
+
+.zodiac--question-input-container > input:focus {
+    outline: none;
+    background-color: #fff2;
+}
+
+.zodiac--submit-btn-container {
+    margin: 2em auto 8em;
+}
+
+
+/* second page */
+
