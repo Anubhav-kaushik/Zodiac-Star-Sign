@@ -184,7 +184,7 @@ disableSubmitButton();
 
 async function onClickSubmit() {
     scrollToHeader();
-    addOrderedListToSection(document.querySelector('.zodiac--footer-liks-container'), resourcesLinks, 2, true);
+    addOrderedListToSection(document.querySelector('.zodiac--footer-links-container'), resourcesLinks, 2, true);
     const userDob = document.querySelector('#user-question').value;
     findZodiacSign('zodiac--main-result-container', userDob, database);  
     setTimeout(() => {
