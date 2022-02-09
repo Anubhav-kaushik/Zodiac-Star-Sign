@@ -340,7 +340,7 @@ body {
     font-family: var(--rounded-100), sans-serif;
     border-top: 2px solid var(--light-margenta);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
