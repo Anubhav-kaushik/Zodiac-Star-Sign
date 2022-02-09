@@ -213,35 +213,35 @@ function createResultCard(resultContainer, resultObj) {
     const textContainer = document.createElement('div');
     textContainer.classList.add('zodiac--result-text');
 
-    const row1 = document.createElement('div');
-    row1.classList.add('result-row1');
+      const row1 = document.createElement('div');
+      row1.classList.add('result-row1');
 
-    const heading = document.createElement('div');
-    heading.classList.add('result-heading');
-    heading.innerHTML = resultObj.name;
-    row1.appendChild(heading);
+        const heading = document.createElement('div');
+        heading.classList.add('result-heading');
+        heading.innerHTML = resultObj.name;
+        row1.appendChild(heading);
 
-    const interval = document.createElement('div');
-    interval.classList.add('result-interval');
-    interval.innerHTML = resultObj.interval;
-    row1.appendChild(interval);
+        const interval = document.createElement('div');
+        interval.classList.add('result-interval');
+        interval.innerHTML = resultObj.interval;
+        row1.appendChild(interval);
 
-    textContainer.appendChild(row1);
+      textContainer.appendChild(row1);
 
-    const row2 = document.createElement('div');
-    row2.classList.add('result-row2');
-    row2.innerHTML = `<p>${resultObj.para1}</p>`;
-    textContainer.appendChild(row2);
+      const row2 = document.createElement('div');
+      row2.classList.add('result-row2');
+      row2.innerHTML = `<p>${resultObj.para1}</p>`;
+      textContainer.appendChild(row2);
 
-    const row3 = document.createElement('div');
-    row3.classList.add('result-row3');
-    row3.innerHTML = `<p>${resultObj.para2}</p>`;
-    textContainer.appendChild(row3);
+      const row3 = document.createElement('div');
+      row3.classList.add('result-row3');
+      row3.innerHTML = `<p>${resultObj.para2}</p>`;
+      textContainer.appendChild(row3);
 
-    const row4 = document.createElement('div');
-    row4.classList.add('result-row4');
-    row4.innerHTML = `<span>Compatible Sign:</span><span>${resultObj['compatible signs']}</span>`;
-    textContainer.appendChild(row4);
+      const row4 = document.createElement('div');
+      row4.classList.add('result-row4');
+      row4.innerHTML = `<span>Compatible Sign:</span><span>${resultObj['compatible signs']}</span>`;
+      textContainer.appendChild(row4);
 
     resultContainer.appendChild(textContainer);
 }
@@ -296,7 +296,7 @@ function findZodiacSign(containerClass, userDob, database) {
     if (zodiacObj != undefined) {
         createResultCard(document.querySelector(`.${containerClass}`), zodiacObj);
     } else {
-        alert('Sorry, we don\'t have that zodiac sign in our database. Please try again.');
+        console.log('Sorry, we don\'t have that zodiac sign in our database. Please try again.');
     }
 }
 

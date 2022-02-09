@@ -60,9 +60,10 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-image: url(infographics/interactive-names/background.jpg);
+    background-image: url(infographics/interactive-names/background.png);
     background-color: var(--bg-margenta);
     background-size: cover;
+    background-repeat: no-repeat;
     color: white;
     font-family: var(--300);
 }
@@ -178,7 +179,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     background-color: var(--button-orange);
-    font-family: var(--rounded-300), sans-serif;
+    font-family: var(--rounded-500), sans-serif;
     font-size: 1.2em;
     color: var(--text-margenta);
     border: none;
@@ -203,7 +204,7 @@ body {
 
 .zodiac--first > h1 {
     font-family: var(--300), sans-serif;
-    font-size: 5em;
+    font-size: 10vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,10 +219,18 @@ body {
 .zodiac--main-divider {
     max-width: 50em;
     margin: 5vmin auto;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.zodiac--main-divider > img {
+    min-height: 1em;
+    margin: 0 auto;
 }
 
 .zodiac--main-paragraphs {
-    font-family: var(--300), sans-serif;
+    font-family: var(--rounded-300), sans-serif;
     font-size: 1.2em;
     margin: 0 auto;
 }
@@ -247,32 +256,40 @@ body {
     margin: 3em auto;
     padding: 0.5em 1.5em 1em;
     font-family: var(--rounded-300), sans-serif;
+    width: 50vmin;
 }
 
 .zodiac--question-input-container input {
-    width: 15em;
+    width: 100%;
     color: var(--text-white);
     background-color: transparent;
     font-size: 1.5em;
     border: none;
-    font-family: var(--rounded-300), sans-serif;
+    font-family: var(--rounded-500), sans-serif;
     text-transform: uppercase;
 }
 
 #user-question::placeholder,
 #user-question::-webkit-input-placeholder {
     color: var(--text-white);
-    font-family: var(--rounded-300), sans-serif;
+    font-family: var(--rounded-500), sans-serif;
     font-weight: 500;
 }
 
 .zodiac--question-input-container > input:focus {
-    outline: none;
     background-color: #fff2;
 }
 
 .zodiac--submit-btn-container {
     margin: 2em auto 8em;
+}
+
+#submit-btn:disabled {
+    background-color: var(--text-white);
+}
+
+#submit-btn:hover {
+    background-color: var(--text-white);
 }
 
 /* second page */
@@ -329,12 +346,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .zodiac--result-text .result-row1 .result-heading {
     font-family: var(--300), sans-serif;
     font-size: 2em;
     margin: 0;
+}
+
+@media screen and (max-width: 450px) {
+    .result-interval {
+        padding-right: 1.5em;
+    }
 }
 
 .zodiac--result-text .result-row4 > span:nth-child(1) {
