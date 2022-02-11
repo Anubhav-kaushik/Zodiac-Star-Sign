@@ -129,6 +129,10 @@ const resourcesLinks = [
 
 let visibleSection = 1;
 
+function sleep(seconds) {
+  return new Promise(resolve => setTimeout(resolve, seconds*1000));
+}
+
 function scrollToHeader() {
     let header = document.querySelector('.zodiac--header');
     header.scrollIntoView({behavior: 'smooth'});
@@ -166,7 +170,7 @@ function resetInputField() {
 
 function checkInputField() {
     const inputField = document.querySelector('#user-question');
-    console.log(inputField.value);
+    
     if (inputField.value.length > 0) {
         enableSubmitButton();
     } else {
@@ -246,6 +250,10 @@ function createResultCard(resultContainer, resultObj) {
     resultContainer.appendChild(textContainer);
 }
 
+function resetResult(resultContainerClass) {
+    const resultContainer = document.querySelector(resultContainerClass);
+    resultContainer.innerHTML = '';
+}
 
 function findZodiacSign(containerClass, userDob, database) {
     const userDobArray = userDob.split('-');
@@ -281,8 +289,6 @@ function findZodiacSign(containerClass, userDob, database) {
 
         const endMonth = months[end.split(' ')[1].toLowerCase()];
         const endDay = parseInt(end.split(' ')[2]);
-
-        console.log(`startMonth: ${startMonth} | startDay: ${startDay} | endMonth: ${endMonth} | endDay: ${endDay}`);
 
         if (userMonth == startMonth && userDay >= startDay) {
               zodiacObj = obj;
@@ -331,5 +337,24 @@ function addOrderedListToSection(section, list, part=1, anchor=false) {
         section.appendChild(container);
     }
 }
+
+// reset game
+
+async function resetGame() {
+  /*
+      Reset the game.
+  */
+  scrollToHeader();
+  await sleep(0.5);
+  disableSubmitButton();
+ 
+  resetInputField();
+  visibleSection = 1;
+  showHideSections(1);
+  
+  resetResult('.zodiac--main-result-container');
+}
+
+
 
 

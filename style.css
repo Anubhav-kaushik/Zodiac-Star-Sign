@@ -221,11 +221,15 @@ body {
     text-transform: uppercase;
 }
 
-#user-question::placeholder,
-#user-question::-webkit-input-placeholder {
+.zodiac--question-input-container input[type="date"]::placeholder,
+.zodiac--question-input-container input[type="date"]::-webkit-input-placeholder {
     color: var(--text-white);
     font-family: var(--rounded-500), sans-serif;
     font-weight: 500;
+}
+
+.zodiac--question-input-container input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
 
 .zodiac--question-input-container > input:focus {
@@ -317,6 +321,58 @@ body {
     color: var(--button-orange);
     font-size: 1em;
     margin: 0 0.5em 0 0;
+}
+
+.zodiac--left-arrow {
+    height: 1em;
+    fill: white;
+    margin-right: 0.2em;
+    transform: translateY(0.1em);
+    transition: fill 0.3s ease-in-out;
+}
+
+.zodiac--retry-btn {
+    margin: 2em auto;
+}
+
+.zodiac--retry-btn a {
+    transition: all 0.3s ease-in-out;
+}
+
+.zodiac--retry-btn a > span {
+    font-family: 'Museo Sans Rounded 700', sans-serif;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+.zodiac--retry-btn a:hover span,
+.zodiac--retry-btn a[data-blink="true"] span {
+    color: var(--shadow-orange);
+}
+
+.zodiac--retry-btn a:hover .zodiac--left-arrow,
+.zodiac--retry-btn a[data-blink="true"] .zodiac--left-arrow {
+    fill: var(--shadow-orange);
+}
+
+.zodiac--retry-btn a[data-blink="true"] span,
+.zodiac--retry-btn a[data-blink="true"] .zodiac--left-arrow {
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% {
+        color: var(--text-white);
+        fill: var(--text-white);
+    }
+    50% {
+        color: var(--shadow-orange);
+        fill: var(--shadow-orange);
+    }
+    100% {
+        color: var(--text-white);
+        fill: var(--text-white);
+    }
 }
 
 .zodiac--explore-btn {

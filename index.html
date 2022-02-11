@@ -11,21 +11,12 @@
         .zodiac--section[data-isVisible="false"] {
             display: none;
         }
+
     </style>
 </head>
 
 <body>
     <div id="zodiac--container" class="zodiac--container">
-        <!-- <div class="zodiac--bg-objects">
-            <div class="object-1"><img src="infographics/interactive-names/sun.svg" alt="Sun"></div>
-            <div class="object-1"><img src="infographics/interactive-names/moon.svg" alt="Moon"></div>
-            <div class="object-1"><img src="infographics/interactive-names/stars.svg" alt="Stars"></div>
-            <div class="object-1"><img src="infographics/interactive-names/eye.svg" alt="Eye"></div>
-            <div class="object-1"><img src="infographics/interactive-names/bursting-star.svg" alt="Star"></div>
-            <div class="object-1"><img src="infographics/interactive-names/cloud.svg" alt="Cloud"></div>
-            <div class="object-1"><img src="infographics/interactive-names/star.svg" alt="Star"></div>
-            <div class="object-1"><img src="infographics/interactive-names/constellation.svg" alt="constellation"></div>
-        </div> -->
         <div class="zodiac--header">
             <figure class="zodiac--logo">
                 <img src="infographics/interactive-names/logo.png" alt="PathForward logo">
@@ -68,38 +59,41 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="zodiac--second zodiac--section" data-section=2 data-isvisible="false">
-            <div class="zodiac--secondary-heading">
-                <h2>
-                    Result
-                </h2>
-            </div>
-            <div class="zodiac--main-result-container">
-                <div class="zodiac--result-icon">
-                    <img src="infographics/interactive-names/aries.svg" alt="icon">
+            <div class="zodiac--second zodiac--section" data-section=2 data-isvisible="false">
+                <div class="zodiac--secondary-heading">
+                    <h2>
+                        Result
+                    </h2>
                 </div>
-                <div class="zodiac--result-text">
-                    <div class="result-row1">
-                        <div class="result-heading">Aries</div>
-                        <div class="result-interval">March 21 - April 19</div>
-                    </div>
-                    <div class="result-row2">
-                        <p>
-                            As an Aries, you're willful, courageous, and headstrong, just like the ram. You have no filter and don't hesitate to say what you mean and show how you feel. Sometimes you act so fast you can't remember why you're mad — though you won't admit it. For you, life is a game and you're always the winner.
-                        </p>
-                    </div>
-                    <div class="result-row3">
-                        <p>You're the daredevil of your group, always ready for a challenge. You get bored easily, though. Yours is the TikTok that's fresh, fiery, and a little off the hook. Houdini, DaVinci, and Jackie Chan are all Aries signs like you — and we couldn't take our eyes off them, either.</p>
-                    </div>
-                    <div class="result-row4">
-                        <span>Compatible Sign:</span><span>Sagittarius, Gemini, Libra</span>
-                    </div>
+                <div class="zodiac--main-result-container">
+                    <!-- Enter result here -->
                 </div>
-            </div>
-            <div class="zodiac--btn-container">
-                <button class="zodiac--btn zodiac--explore-btn" onclick="onClickExplore()">Explore Astrology Readings</button>
+                <div class="zodiac--retry-btn">
+                    <a href="#" onclick="resetGame()" id="zodiac--restart" data-blink=true>
+                        <span>
+                            <svg viewBox="0 0 60.3 50" class="zodiac--left-arrow">
+    
+                                <g>
+                                    <path class="arrow" d="M57.1,24.5c0,0.4,0,0.8,0,1.2c-0.1,0-0.1,0.1-0.1,0.1c-0.3,1.7-1.9,3.2-4,3.1c-12.1,0-24.2,0-36.2,0c-0.1,0-0.2,0-0.4,0
+                                        c0.1,0.1,0.2,0.2,0.3,0.3c4.1,4.1,8.1,8.1,12.2,12.2c0.1,0.1,0.3,0.3,0.4,0.4c1.8,2.1,0.8,5.4-1.8,6.2C27.2,48,27,48,26.8,48.1
+                                        c-0.4,0-0.7,0-1.1,0c0-0.1-0.1-0.1-0.1-0.1c-0.9-0.2-1.6-0.6-2.2-1.2c-3.7-3.7-7.3-7.3-11-11c-2.6-2.6-5.3-5.3-7.9-7.9
+                                        c-0.6-0.6-1-1.2-1.1-2c0-0.1,0-0.2-0.1-0.2c0-0.4,0-0.8,0-1.2c0.1,0,0.1-0.1,0.1-0.1c0.2-0.9,0.6-1.6,1.3-2.2c3-3,6.1-6.1,9.1-9.1
+                                        c3.3-3.3,6.5-6.5,9.8-9.8c0.6-0.6,1.2-1,2-1.2c0.1,0,0.2,0,0.2-0.1c0.4,0,0.7,0,1.1,0c0,0,0,0,0.1,0.1c1.2,0.2,2.2,0.8,2.8,1.9
+                                        c0.9,1.5,0.6,3.4-0.7,4.7c-4.1,4.1-8.2,8.2-12.4,12.4c-0.1,0.1-0.2,0.1-0.2,0.2c0,0,0,0.1,0.1,0.1c0.1,0,0.2,0,0.3,0
+                                        c3.5,0,7,0,10.5,0c8.7,0,17.3,0,26,0c1.8,0,3.3,1.1,3.8,2.8C57,24.1,57,24.3,57.1,24.5z"/>
+                                </g>
+                                </svg>
+                                
+                        </span>
+                        <span>
+                            Enter Another Birthday
+                        </span>
+                    </a>
+                </div>
+                <div class="zodiac--btn-container">
+                    <button class="zodiac--btn zodiac--explore-btn" onclick="onClickExplore()">Explore Astrology Readings</button>
+                </div>
             </div>
         </div>
 
